@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-// Define the number of equations (1 for this case)
 #define NE 1
 
 // Differential equation: dC/dt = -kC
@@ -11,7 +10,7 @@ void Derivs(double x, double y[], double dydx[]) {
     dydx[0] = -k * y[0]; // First-order degradation
 }
 
-// Fourth-Order Runge-Kutta Method
+// 4th Runge-Kutta Method
 void RK4(double x, double y[], double h, int n, void (*Derivs)(double, double[], double[])) {
     double k1[NE], k2[NE], k3[NE], k4[NE];
     double ytemp[NE];
@@ -48,7 +47,7 @@ void RK4(double x, double y[], double h, int n, void (*Derivs)(double, double[],
 void Integrator(double *x, double y[], double h, double xend, int n, 
                 void (*RK4)(double, double[], double, int, void (*)(double, double[], double[]))) {
     while ((*x) < xend) {
-        if (xend - *x < h) h = xend - *x; // Adjust step size near the end
+        if (xend - *x < h) h = xend - *x; // Adjust step size 
         RK4(*x, y, h, n, Derivs);
         (*x) += h;
     }
@@ -63,9 +62,9 @@ int main() {
     double C0 = 1e7;          // Initial concentration
     double y[NE] = {C0};      // Dependent variables
     double x = xi;
-    int m = 0;                // Output counter
-    double xpm[100];          // Output time points
-    double ypm[NE][100];      // Output concentrations
+    int m = 0;                
+    double xpm[100];          
+    double ypm[NE][100];      
 
     // Save initial condition
     xpm[m] = x;
