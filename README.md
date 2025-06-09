@@ -20,7 +20,7 @@ Program memberikan *output* antara lain:
 ## Metode 
 Metode numerik **Runge-Kutta Orde 4 (RK4)** merupakan metode yang biasanya dipakai untuk menyelesaikan masalah nilai awal (initial value problem) dari persamaan diferensial biasa orde satu. Metode ini memberikan akurasi tinggi dengan kesalahan global sebesar $O(h^5)$. Metode RK4 akan melalui evaluasi empat ***slope*** ($k1$ - $k4$) yang didefinisikan:
 
-$$k_1 = f(t_n, y_n), \\k_2 = f(t_n + \tfrac{h}{2}, y_n + \tfrac{hk_1}{2}), \\k_3 = f(t_n + \tfrac{h}{2}, y_n + \tfrac{hk_2}{2}), \\k_4 = f(t_n + h, y_n + hk_3)$$
+$$k_1 = f(t_n, y_n),\\k_2 = f(t_n + \tfrac{h}{2}, y_n + \tfrac{hk_1}{2}),\\k_3 = f(t_n + \tfrac{h}{2}, y_n + \tfrac{hk_2}{2}),\\k_4 = f(t_n + h, y_n + hk_3)$$
 
 Lalu update:
 $$y_{n+1} = y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)$$
