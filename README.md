@@ -354,7 +354,7 @@ int main() {
 ---
 ## Analisis Kesalahan
 - **Kesalahan Sebenarnya (True Error):**
-  $$ \epsilon_t = \left|\frac{\text{Solusi Analitik} - \text{Solusi RK4}}{\text{Solusi Analitik}}\right| \times 100\% $$
+  $$\epsilon_t = \left|\frac{\text{Solusi Analitik} - \text{Solusi RK4}}{\text{Solusi Analitik}}\right| \times 100\%$$
 
 - **Kesalahan Aproksimasi (Approximate Error):**
-  $$ \epsilon_a = \left|\frac{\text{Solusi Saat Ini} - \text{Solusi Sebelumnya}}{\text{Solusi Saat Ini}}\right| \times 100\% $$
+  $$\epsilon_a = \left|\frac{\text{Solusi Saat Ini} - \text{Solusi Sebelumnya}}{\text{Solusi Saat Ini}}\right| \times 100\%$$
